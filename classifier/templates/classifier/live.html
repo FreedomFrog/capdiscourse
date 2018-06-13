@@ -1,0 +1,14 @@
+{% extends 'classifier/base.html' %}
+{% block title %}Live{% endblock %}
+{% include 'classifier/navigation.html' %}
+
+
+{% block content %}
+    <ul>
+    {% for item in data %}
+
+        <li>{{ item.topic }} | {{ item.entity }}</li>
+
+    {% endfor %}
+    </ul>
+{% endblock %}

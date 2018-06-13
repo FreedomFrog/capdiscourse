@@ -1,0 +1,237 @@
+{% extends 'classifier/base.html' %}
+{% block title %}About{% endblock %}
+{% block content %}
+    <p>This is my site and I am proud of it.</p>
+
+    <div id="pos-tagging">
+    <h1>Part of Speech tagging</h1>
+    <table>
+        <tr>
+            <th>Tag</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <th>CC</th>
+            <th>coordinating conjunction</th>
+        </tr>
+        <tr>
+            <th>CD</th>
+            <th>cardinal digit</th>
+        </tr>
+        <tr>
+            <th>DT</th>
+            <th>determiner</th>
+        </tr>
+        <tr>
+            <th>EX</th>
+            <th>existential there (like: "there is" ... think of it like "there exists")</th>
+        </tr>
+        <tr>
+            <th>FW</th>
+            <th>foreign word</th>
+        </tr>
+        <tr>
+            <th>IN</th>
+            <th>preposition/subordinating conjunction</th>
+        </tr>
+        <tr>
+            <th>JJ</th>
+            <th>adjective	'big'</th>
+        </tr>
+        <tr>
+            <th>JJR</th>
+            <th>adjective, comparative	'bigger'</th>
+        </tr>
+        <tr>
+            <th>JJS</th>
+            <th>adjective, superlative	'biggest'</th>
+        </tr>
+        <tr>
+            <th>LS</th>
+            <th>list marker	1)</th>
+        </tr>
+        <tr>
+            <th>MD</th>
+            <th>modal	could, will</th>
+        </tr>
+        <tr>
+            <th>NN</th>
+            <th>noun, singular 'desk'</th>
+        </tr>
+        <tr>
+            <th>NNS</th>
+            <th>noun plural	'desks'</th>
+        </tr>
+        <tr>
+            <th>NNP</th>
+            <th>proper noun, singular	'Harrison'</th>
+        </tr>
+        <tr>
+            <th>NNPS</th>
+            <th>proper noun, plural	'Americans'</th>
+        </tr>
+        <tr>
+            <th>PDT</th>
+            <th>predeterminer	'all the kids'</th>
+        </tr>
+        <tr>
+            <th>POS</th>
+            <th>possessive ending	parent's</th>
+        </tr>
+        <tr>
+            <th>PRP</th>
+            <th>personal pronoun	I, he, she</th>
+        </tr>
+        <tr>
+            <th>PRP$</th>
+            <th>possessive pronoun	my, his, hers</th>
+        </tr>
+        <tr>
+            <th>RB</th>
+            <th>adverb	very, silently</th>
+        </tr>
+        <tr>
+            <th>RBR</th>
+            <th>adverb, comparative	better</th>
+        </tr>
+        <tr>
+            <th>RBS</th>
+            <th>adverb, superlative	best</th>
+        </tr>
+        <tr>
+            <th>RP</th>
+            <th>particle	give up</th>
+        </tr>
+        <tr>
+            <th>TO</th>
+            <th>to	go 'to' the store.</th>
+        </tr>
+        <tr>
+            <th>UH</th>
+            <th>interjection	errrrrrrrm</th>
+        </tr>
+        <tr>
+            <th>VB</th>
+            <th>verb, base form	take</th>
+        </tr>
+        <tr>
+            <th>VBD</th>
+            <th>verb, past tense	took</th>
+        </tr>
+        <tr>
+            <th>VBG</th>
+            <th>verb, gerund/present participle	taking</th>
+        </tr>
+        <tr>
+            <th>VBN</th>
+            <th>verb, past participle	taken</th>
+        </tr>
+        <tr>
+            <th>VBP</th>
+            <th>verb, sing. present, non-3d	take</th>
+        </tr>
+        <tr>
+            <th>VBZ</th>
+            <th>verb, 3rd person sing. present	takes</th>
+        </tr>
+        <tr>
+            <th>WDT</th>
+            <th>wh-determiner	which</th>
+        </tr>
+        <tr>
+            <th>WP</th>
+            <th>wh-pronoun	who, what</th>
+        </tr>
+        <tr>
+            <th>WP$</th>
+            <th>possessive wh-pronoun	whose</th>
+        </tr>
+        <tr>
+            <th>WRB</th>
+            <th>wh-abverb	where, when</th>
+        </tr>
+
+    </table>
+
+    <h1>Topic Identification</h1>
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <th>PERSON</th>
+            <th>People, including fictional.</th>
+        </tr>
+        <tr>
+            <th>NORP</th>
+            <th>Nationalities or religious or political groups.</th>
+        </tr>
+        <tr>
+            <th>FAC</th>
+            <th>Buildings, airports, highways, bridges, etc.</th>
+        </tr>
+        <tr>
+            <th>ORG</th>
+            <th>Companies, agencies, institutions, etc.</th>
+        </tr>
+        <tr>
+            <th>GPE</th>
+            <th>Countries, cities, states.</th>
+        </tr>
+        <tr>
+            <th>LOC</th>
+            <th>Non-GPE locations, mountain ranges, bodies of water.</th>
+        </tr>
+        <tr>
+            <th>PRODUCT</th>
+            <th>Objects, vehicles, foods, etc. (Not services.)</th>
+        </tr>
+        <tr>
+            <th>EVENT</th>
+            <th>Named hurricanes, battles, wars, sports events, etc.</th>
+        </tr>
+        <tr>
+            <th>WORK_OF_ART</th>
+            <th>Titles of books, songs, etc.</th>
+        </tr>
+        <tr>
+            <th>LAW</th>
+            <th>Named documents made into laws.</th>
+        </tr>
+        <tr>
+            <th>LANGUAGE</th>
+            <th>Any named language.</th>
+        </tr>
+        <tr>
+            <th>DATE</th>
+            <th>Absolute or relative dates or periods.</th>
+        </tr>
+        <tr>
+            <th>TIME</th>
+            <th>Times smaller than a day.</th>
+        </tr>
+        <tr>
+            <th>PERCENT</th>
+            <th>Percentage, including "%".</th>
+        </tr>
+        <tr>
+            <th>MONEY</th>
+            <th>Monetary values, including unit.</th>
+        </tr>
+        <tr>
+            <th>QUANTITY</th>
+            <th>Measurements, as of weight or distance.</th>
+        </tr>
+        <tr>
+            <th>ORDINAL</th>
+            <th>"first", "second", etc.</th>
+        </tr>
+        <tr>
+            <th>CARDINAL</th>
+            <th>Numerals that do not fall under another type.</th>
+        </tr>
+
+    </table>
+    </div>
+{% endblock %}

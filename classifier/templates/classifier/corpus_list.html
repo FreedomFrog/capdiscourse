@@ -1,0 +1,16 @@
+
+
+{% block content %}
+    {% for item in corpus %}
+        <div class="corpus">
+            <h3><a href="{% url 'corpus_detail' pk=item.pk %}">details</a></h3>
+             <div class="date">
+                {{ item.date }}
+            </div>
+            <div class="sentiment">
+                {{ item.binary_sentiment }}
+            </div>
+            <p>{{ item.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

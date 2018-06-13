@@ -1,0 +1,18 @@
+{% extends 'classifier/base.html' %}
+
+{% block content %}
+        {% if request.user == usertext.user %}
+            <h3>{{ usertext.text }}</h3>
+            <h4>{{ usertext.date }}</h4>
+            <p>{{ usertext.pos}}</p>
+            <p>{{ usertext.binary_sentiment }} Binary Sentiment</p>
+            <p>{{ usertext.binary_confidence }} Agreement</p>
+            <p>{{ usertext.TextBlob_sentiment_polarity }} Polarity</p>
+            <p>{{ usertext.TextBlob_sentiment_subjectivity }} Subjectivity</p>
+            <p>{{ usertext.vaderSentiment_neg }} Negative Sentiment</p>
+            <p>{{ usertext.vaderSentiment_neu }} Neutral Sentiment</p>
+            <p>{{ usertext.vaderSentiment_pos }} Positive Sentiment</p>
+            <p>{{ usertext.vaderSentiment_compound }} Compound Sentiment</p>
+
+        {% endif %}
+{% endblock %}

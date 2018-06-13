@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}CapDiscourse{% endblock %}</title>
+    <meta name="viewport" context="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<main>
+{% block content %}
+    {% endblock %}
+</main>
+
+<form action="/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="get_text">Enter Text</label>
+    <textarea name="get_text" id="get_text" cols="30" rows="10"></textarea>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

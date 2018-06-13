@@ -1,0 +1,14 @@
+{% extends 'classifier/base.html' %}
+{% block title %}Topics{% endblock %}
+{% include 'classifier/navigation.html' %}
+{{ topics  }}
+
+{% block content %}
+       {% for item in topics %}
+        <div class="topic">
+            <h3>{{ item.topic }}</h3>
+            <div><p>Entity {{ item.entity }}</p></div>
+        </div>
+    {% endfor %}
+
+{% endblock %}

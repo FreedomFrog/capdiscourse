@@ -1,0 +1,10 @@
+{% extends 'classifier/base.html' %}
+{% block title %}Parts of speech{% endblock %}
+{% block content %}
+<body>
+<p>Parts of speech | {{ corp.pos }}</p>
+<p>Binary Sentiment | {{ corp.binary_sentiment }}</p>
+</body>
+
+{% include 'classifier/textform.html' %}
+{% endblock %}

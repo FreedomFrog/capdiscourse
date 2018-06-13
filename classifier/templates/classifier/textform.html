@@ -1,0 +1,6 @@
+<form action="{% url 'pos' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="get_text">Enter Text</label>
+    <textarea name="get_text" id="get_text" cols="30" rows="10"></textarea>
+    <input type="submit" value="Submit">
+</form>
