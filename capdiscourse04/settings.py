@@ -134,6 +134,6 @@ LOGOUT_REDIRECT_URL = 'home'
 STATIC_URL = '/static/'
 
 try:
-    from capdiscourse04.etc.local_settings import *
+    from capdiscourse04.local_settings import *
 except ImportError:
     pass
