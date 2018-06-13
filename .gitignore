@@ -32,3 +32,4 @@ pip-delete-this-directory.txt
 .etc/
 secret.txt
 classifier/pickled_algos/featuresets.pickle
+local_settings.py
