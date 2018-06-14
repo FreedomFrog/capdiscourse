@@ -25,7 +25,7 @@ def pos(request):
         if request.user.is_authenticated:
             return render(request, 'classifier/history.html')
         return render(request, 'classifier/pos.html', {'corp': corp})
-    return render(request, 'classifier/home.html')
+    return render(request, 'classifier\home.html')
 
 
 def live(request):
