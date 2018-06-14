@@ -5,7 +5,7 @@ from django.views.generic.base import TemplateView
 from classifier import views
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='classifier\home.html'), name='home'),
+    path('', TemplateView.as_view(template_name='classifier/home.html'), name='home'),
     path('pos/', views.pos, name='pos'),
     path('history/', views.history_list, name='history'),
     path('about/', views.about, name='about'),
