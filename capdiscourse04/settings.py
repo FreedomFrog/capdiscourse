@@ -27,7 +27,7 @@ with open(os.path.join(BASE_DIR, 'capdiscourse04', 'etc', 'secret.txt')) as f:
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '178.128.185', '127.0.0.1', 'www.capdiscourse.com'
+    '178.128.185.0', '127.0.0.1', 'www.capdiscourse.com'
 ]
 
 
