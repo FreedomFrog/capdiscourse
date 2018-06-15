@@ -13,14 +13,14 @@ class Corpus(models.Model):
     text = models.TextField()
     pos = models.TextField(blank=True, null=True)
     date = models.DateTimeField(default=timezone.now)
-    binary_sentiment = models.CharField(max_length=5, blank=True, null=True)
-    binary_confidence = models.CharField(max_length=5, blank=True, null=True)
-    TextBlob_sentiment_polarity = models.CharField(max_length=5, blank=True, null=True)
-    TextBlob_sentiment_subjectivity = models.CharField(max_length=5, blank=True, null=True)
-    vaderSentiment_neg = models.CharField(max_length=5, blank=True, null=True)
-    vaderSentiment_neu = models.CharField(max_length=5, blank=True, null=True)
-    vaderSentiment_pos = models.CharField(max_length=5, blank=True, null=True)
-    vaderSentiment_compound = models.CharField(max_length=5, blank=True, null=True)
+    binary_sentiment = models.CharField(max_length=50, blank=True, null=True)
+    binary_confidence = models.CharField(max_length=50, blank=True, null=True)
+    TextBlob_sentiment_polarity = models.CharField(max_length=50, blank=True, null=True)
+    TextBlob_sentiment_subjectivity = models.CharField(max_length=50, blank=True, null=True)
+    vaderSentiment_neg = models.CharField(max_length=50, blank=True, null=True)
+    vaderSentiment_neu = models.CharField(max_length=50, blank=True, null=True)
+    vaderSentiment_pos = models.CharField(max_length=50, blank=True, null=True)
+    vaderSentiment_compound = models.CharField(max_length=50, blank=True, null=True)
 
     def save(self, *args, **kwargs):
         if not self.pos:
@@ -45,6 +45,9 @@ class Corpus(models.Model):
             #     a_record.save()
             #     a_record.texts.add(self)
         super().save(*args, **kwargs)
+
+    # def pos_readable(self):
+
 
     class Meta:
         abstract = True
