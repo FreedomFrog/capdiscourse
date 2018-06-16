@@ -43,7 +43,7 @@ def live(request):
 
 
 def topics_list(request):
-    topics = Topic.objects.all()
+    topics = Topic.objects.filter(user=request.user)
     return render(request, 'classifier/topics.html', {'topics': topics})
 
 
