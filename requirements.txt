@@ -6,7 +6,7 @@ cytoolz==0.8.2
 dill==0.2.7.1
 dj-database-url==0.5.0
 dj-static==0.0.6
-Django==2.0.6
+Django==2.2.13
 django-toolbelt==0.0.1
 gunicorn==19.8.1
 idna==2.6
